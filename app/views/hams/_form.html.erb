@@ -1,0 +1,17 @@
+<%= form_for(@ham) do |f| %>
+  <% if @ham.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ham.errors.count, "error") %> prohibited this ham from being saved:</h2>
+
+      <ul>
+      <% @ham.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

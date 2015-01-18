@@ -1,0 +1,23 @@
+<h1>Listing play_infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @play_infos.each do |play_info| %>
+      <tr>
+        <td><%= link_to 'Show', play_info %></td>
+        <td><%= link_to 'Edit', edit_play_info_path(play_info) %></td>
+        <td><%= link_to 'Destroy', play_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Play info', new_play_info_path %>
